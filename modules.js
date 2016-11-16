@@ -84,26 +84,22 @@
 		}
 		return result;
 	}
+	
 
-	exports.sub = function(exports) {
-		var names = ["January", "February", "March", "April", "May", "June", "July", "August", 
-		"September", "October", "November", "December"];
+	// exports.sub = function(exports) {
+	// 	var names = ["January", "February", "March", "April", "May", "June", "July", "August", 
+	// 	"September", "October", "November", "December"];
 
-		exports.name = function(number) {
-			return names[number];
-		};
+	// 	exports.name = function(number) {
+	// 		return names[number];
+	// 	};
 
-		exports.number = function(name) {
-			return names.indexOf(name);
-		};
-		return exports;
-	}
+	// 	exports.number = function(name) {
+	// 		return names.indexOf(name);
+	// 	};
+	// 	return exports;
+	// }
 
-	//export for node or attach to 'window' for browser
-	if (typeof module != 'undefined' && module.exports) {
-		module.exports = hModule;
-	}
-
-})(typeof window === 'undefined' || window === null ? global.HeyModule.sub = {} : this.HeyModule.sub = {});
+})(typeof window === 'undefined' || window === null ? global.HeyModule = {} : this.HeyModule = {});
 
 console.log(HeyModule.sub.name(3));

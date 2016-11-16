@@ -84,7 +84,41 @@
 		}
 		return result;
 	}
-	
+
+	function Person() {}
+
+	Person.prototype.describe = function() {
+		console.log(this.name, this.age);
+	}
+
+	Person.prototype.init = function(name, age) {
+		this.name = name;
+		this.age = age;
+	}
+
+	function Student() {}
+
+	Student.prototype = new Person();
+
+	Student.prototype.learn = function(subject) {
+		this.subject = subject;
+		console.log(this.name + ' just learned ' + subject);
+	}
+
+	function Teacher() {}
+
+	Teacher.prototype = new Person();
+
+	Teacher.prototype.level = function(gradeLevel) {
+		console.log(this.name + ' teaches grade ' + gradeLevel );
+	}
+
+	// var msRobinson = new Teacher();
+
+	// msRobinson.init('Ms. Robinson', 36);
+
+	// msRobinson.level(2);
+
 
 	// exports.sub = function(exports) {
 	// 	var names = ["January", "February", "March", "April", "May", "June", "July", "August", 
@@ -102,4 +136,4 @@
 
 })(typeof window === 'undefined' || window === null ? global.HeyModule = {} : this.HeyModule = {});
 
-console.log(HeyModule.sub.name(3));
+

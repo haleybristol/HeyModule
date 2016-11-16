@@ -83,18 +83,18 @@
 			result *= base;
 		}
 		return result;
-	}
+	};
 
 	function Person() {}
 
 	Person.prototype.describe = function() {
 		console.log(this.name, this.age);
-	}
+	};
 
 	Person.prototype.init = function(name, age) {
 		this.name = name;
 		this.age = age;
-	}
+	};
 
 	function Student() {}
 
@@ -103,7 +103,7 @@
 	Student.prototype.learn = function(subject) {
 		this.subject = subject;
 		console.log(this.name + ' just learned ' + subject);
-	}
+	};
 
 	function Teacher() {}
 
@@ -111,7 +111,7 @@
 
 	Teacher.prototype.level = function(gradeLevel) {
 		console.log(this.name + ' teaches grade ' + gradeLevel );
-	}
+	};
 
 	// var msRobinson = new Teacher();
 

@@ -6,7 +6,7 @@
 		console.log('Created By: Haley Bristol, \n Date: November 12, 2016 \n Hack University JavaScript Foundations Course');
 	};
 
-	exports.minimum = function(a, b ) {
+	exports.minimum = function(a, b) {
 		if (a < b) {
 			return a;
 		}
@@ -113,26 +113,23 @@
 		console.log(this.name + ' teaches grade ' + gradeLevel );
 	};
 
-	// var msRobinson = new Teacher();
+	function(exports) {
+		var names = ["January", "February", "March", "April", "May", "June", "July", "August", 
+		"September", "October", "November", "December"];
 
-	// msRobinson.init('Ms. Robinson', 36);
+		exports.name = function(number) {
+			return names[number];
+		};
 
-	// msRobinson.level(2);
+		exports.number = function(name) {
+			return names.indexOf(name);
+		};
+		return exports;
+	}
 
-
-	// exports.sub = function(exports) {
-	// 	var names = ["January", "February", "March", "April", "May", "June", "July", "August", 
-	// 	"September", "October", "November", "December"];
-
-	// 	exports.name = function(number) {
-	// 		return names[number];
-	// 	};
-
-	// 	exports.number = function(name) {
-	// 		return names.indexOf(name);
-	// 	};
-	// 	return exports;
-	// }
+	exports.Month = Month;
+	exports.Person = Person;
+	exports.Teacher = Teacher;
 
 })(typeof window === 'undefined' || window === null ? global.HeyModule = {} : this.HeyModule = {});
 
